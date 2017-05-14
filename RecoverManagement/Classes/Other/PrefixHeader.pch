@@ -1,0 +1,60 @@
+//
+//  PrefixHeader.pch
+//  RecoverManagement
+//
+//  Created by 何姝雯 on 2016/10/24.
+//  Copyright © 2016年 回收哥. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIView+Frame.h"
+#import "UIImage+Image.h"
+#import "UIColor+Expanded.h"
+#import "VerifyTool.h"
+#import "PlaceholderTextView.h"
+#import "RMSelectModel.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
+
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+#import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
+
+#import "BMPopView.h"
+
+
+#define MapKey @"4aKiwYEoYWAbckexa7WukEqv6vjfN7Oq"
+/**
+ *  定义是否第一次访问的key
+ */
+#define KEY_HAS_LAUNCHED_ONCE   @"HasLaunchedOnce"
+#define KUserid @"userid"
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+//获取屏幕宽度
+#define KScreenWidth  [UIScreen mainScreen].bounds.size.width
+//获取屏幕高度
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define KScreen_Frame       (CGRectMake(0, 0 ,KScreenWidth,KScreenHeight))
+
+//获得RGB颜色
+#define RMColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define LMColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define COLOR(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+#define RMNavTitle18Font [UIFont fontWithName:@"HelveticaNeue-Bold"  size:18.0f]
+
+#define RMName14Font [UIFont systemFontOfSize:14]//首页功能点标题
+#define RMText15Font [UIFont systemFontOfSize:15]//黑色table title
+#define RMTime12Font [UIFont systemFontOfSize:12] //浅灰小字体 eg时间
+#define RMStateFont RMNameFont  //蓝色高亮字体 eg审批中
+
+
+
+#endif /* PrefixHeader_pch */
