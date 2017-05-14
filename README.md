@@ -1,2 +1,2 @@
 # RecoverManagement
-考情管理软件
+考勤管理软件
